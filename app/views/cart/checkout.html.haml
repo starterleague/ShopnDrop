@@ -1,0 +1,11 @@
+
+= form_tag '#', :id => "not_done_yet" do |form|
+  %p
+    = label_tag :card_number
+    = text_field_tag :card_number
+  
+  %p
+    = submit_tag "Place Order"
+    or
+    = link_to "Cancel", root_url
+  

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  total: 1
+  card_number: MyString
+  email: MyString
+
+two:
+  total: 1
+  card_number: MyString
+  email: MyString

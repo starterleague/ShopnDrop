@@ -1,0 +1,24 @@
+#cart
+  %h1 Your Cart
+  %p You have #{pluralize(cart.cart_items.count, 'item')} in your cart.
+
+  - if cart.cart_items.any?
+    %table#cart_items
+      %thead
+        %tr
+          %th Product
+          %th Price
+          %th 
+      %tbody
+      - cart.cart_items.each do |cart_item|
+        %tr
+          %td= cart_item.product.name 
+          %td= number_to_currency(cart_item.product.price/100)
+          %td= link_to "Remove", cart_item_url(cart_item), :method => :delete
+  
+    %h3 
+      Total: #{number_to_currency(cart.total/100)}
+      = link_to "Check Out", '#', :id => 'checkout', :class => 'action_link'
+      = link_to "Remove All Items", reset_cart_url(cart), :method => :delete, :class => 'action_link'
+    
+  

@@ -1,0 +1,21 @@
+= render 'cart_items/shopping_cart'
+
+#catalog
+  
+  %h1 Catalog
+
+  %table
+    %thead
+      %tr
+        %th Product
+        %th Price
+        %th 
+    %tbody
+    - @products.each do |product|
+      %tr
+        %td= product.name 
+        %td= number_to_currency(product.price/100)
+        %td= link_to "Add to Cart", add_to_cart_url(:product_id => product.id), :method => :post
+    
+  
+  
