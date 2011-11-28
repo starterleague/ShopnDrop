@@ -21,7 +21,7 @@
   
     %h3 
       Total: #{number_to_currency(cart.total/100)}
-      = link_to "Check Out", '#', :id => 'checkout', :class => 'action_link'
+      = link_to "Check Out", new_order_url, :id => 'checkout', :class => 'action_link'
       = link_to "Remove All Items", reset_cart_url(cart), :method => :delete, :class => 'action_link'
     
   

@@ -32,3 +32,5 @@ table tbody td { padding: 4px; }
 
 #cart { border: solid 5px #999; padding: 6px; }
 #catalog { border: solid 5px #999; padding: 6px; }
+
+.field_error { color: red; }

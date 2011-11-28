@@ -1,0 +1,16 @@
+= form_for @order, :remote => true do |form|
+
+  - if @order.errors.any?
+    %ul
+      - @order.errors.full_messages.each do |msg|
+        %li.field_error= msg
+        
+  - [:email, :card_number].each do |attr|
+    %p
+      = form.label attr
+      = form.text_field attr
+  
+  %p
+    = submit_tag "Place Order"
+    or
+    = link_to "Cancel", root_url

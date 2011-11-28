@@ -7,9 +7,11 @@
     = csrf_meta_tags
 
   %body
-
     #header
       %h1= link_to "Shop'n'Drop", root_url
-      
+    
+    - if flash[:notice].present?
+      #notice= notice 
+
     = yield
 
