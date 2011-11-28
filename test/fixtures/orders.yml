@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cart_id: 1
+  email: MyString
+  card_number: MyString
+  tracking_number: MyString
+
+two:
+  cart_id: 1
+  email: MyString
+  card_number: MyString
+  tracking_number: MyString

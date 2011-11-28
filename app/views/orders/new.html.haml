@@ -1,5 +1,10 @@
+= form_for(@order, :remote => true) do |form|
 
-= form_for(@order), :id => "not_done_yet" do |form|
+  - if @order.errors.any?
+    %ul 
+      - @order.errors.full_messages.each do |msg|
+        %li= msg
+      
   %p
     = form.label :email, "What's your email address?"
     = form.text_field :email
@@ -11,4 +16,3 @@
     = submit_tag "Place Order"
     or
     = link_to "Cancel", root_url
-  

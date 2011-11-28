@@ -1,6 +1,9 @@
 Shopper::Application.routes.draw do
   
   get "products/index"
+
+  resources :orders
+  
   get "cart/checkout"
 
   delete "cart/:id" => "cart#destroy", :as => :reset_cart

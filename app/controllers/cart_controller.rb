@@ -1,6 +1,6 @@
 class CartController < ApplicationController
   
-  layout nil
+  layout nil  
   
   def destroy
     reset_session

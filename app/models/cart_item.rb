@@ -6,6 +6,9 @@ class CartItem < ActiveRecord::Base
   after_create :add_to_cart_total
   after_destroy :decrease_cart_total
 
+  validates_presence_of :cart
+  validates_presence_of :product
+  
   def add_to_cart_total
     cart.total ||= 0
     cart.total += self.price
