@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   
   def cart
     logger.debug "Accessing the cart..."
-    session[:cart_id] ||= Cart.create.id
+    session[:cart_id] ||= Cart.create(:total => 0).id
     logger.debug "The cart id: #{session[:cart_id]}"
     @cart = Cart.find(session[:cart_id])
   end

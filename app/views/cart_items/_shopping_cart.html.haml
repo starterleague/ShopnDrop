@@ -1,6 +1,9 @@
 #cart
   %h1 Your Cart
-  %p You have #{pluralize(cart.cart_items.count, 'item')} in your cart.
+  %p 
+    You have 
+    = pluralize(cart.cart_items.count, 'item')
+    %strong in your cart.
 
   - if cart.cart_items.any?
     %table#cart_items
