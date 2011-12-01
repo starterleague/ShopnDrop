@@ -9,8 +9,8 @@ $(function() {
   
   $("#checkout").click(function(event) {
     event.preventDefault();
-    $("#catalog").load("/orders/new", function() {
-      $("#order_email").focus(); 
+    $("#catalog").load("/orders/new");
+    $("#order_email").focus(); 
     });
   });
   
